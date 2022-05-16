@@ -1,6 +1,3 @@
 # Add scripts to crontab to run on startup
-# Make a Instructions file
 
-# Debain weekly build -> offline GNOME
-https://cdimage.debian.org/cdimage/unofficial/non-free/images-including-firmware/weekly-live-builds/amd64/iso-hybrid/
-
+# update softwareMin
