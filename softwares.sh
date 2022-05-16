@@ -2,6 +2,7 @@
 sudo apt update -y
 sudo apt install git curl wget -y
 
+
 #Adding apt External Sources 
 #albert
 curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add -
@@ -23,9 +24,13 @@ curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microso
 sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
 
-#Installing apt Packages
+
+#PPA
+#OBS-STUDIO
+sudo add-apt-repository ppa:obsproject/obs-studio
+
 sudo apt update -y
-sudo apt install preload vlc gimp gparted flatpak scrcpy adb snapd albert code apt-transport-https dkms ttf-mscorefonts-installer rar unrar libavcodec-extra microsoft-edge-stable gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi zsh qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon virt-manager -y
+sudo apt install preload vlc gimp gparted flatpak gnome-software-plugin-flatpak dconf-editor v4l2loopback-dkms obs-studio scrcpy adb albert code apt-transport-https dkms ttf-mscorefonts-installer rar unrar libavcodec-extra microsoft-edge-stable gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi zsh qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon virt-manager gnome-shell-extensions chrome-gnome-shell gnome-tweaks-y
 
 #Removing Duplicates form apt Sources
 rm -f packages.microsoft.gpg
@@ -33,16 +38,20 @@ sudo rm microsoft.gpg
 sudo rm -rv /etc/apt/sources.list.d/microsoft-edge-dev.list
 
 #snap Packages
-sudo snap install core
 sudo snap install emote
-sudo snap install spotify
-sudo snap install telegram
-sudo snap install postman
 sudo snap install onlyoffice-desktopeditors
 
 #flatpak Packages
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub org.nomacs.ImageLounge -y
+flatpak install flathub org.nomacs.ImageLounge -y #Image Viewer (Frameless)
+flatpak install flathub com.spotify.Client -y
+flatpak install flathub org.telegram.desktop -y
+flatpak install flathub com.getpostman.Postman -y
+flatpak install flathub com.discordapp.Discord -y
+flatpak install flathub io.bassi.Amberol -y #Music Player
+flatpak install flathub com.mattjakeman.ExtensionManager -y 
+flatpak install flathub io.github.Figma_Linux.figma_linux -y
+flatpak install flathub io.github.shiftey.Desktop
 
 #Install and configure Virtual Manager
 sudo virsh net-start default
