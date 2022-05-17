@@ -55,4 +55,5 @@ gsettings set org.gnome.shell enabled-extensions "['floating-dock@nandoferreira_
 sudo usermod -s /usr/bin/zsh $(whoami)
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/powerlevel10k
 exec zsh
+
 p10k configure
