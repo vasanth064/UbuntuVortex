@@ -51,7 +51,7 @@ flatpak install flathub com.discordapp.Discord -y
 flatpak install flathub io.bassi.Amberol -y #Music Player
 flatpak install flathub com.mattjakeman.ExtensionManager -y 
 flatpak install flathub io.github.Figma_Linux.figma_linux -y
-flatpak install flathub io.github.shiftey.Desktop
+flatpak install flathub io.github.shiftey.Desktop -y
 
 #Install and configure Virtual Manager
 sudo virsh net-start default
