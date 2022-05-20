@@ -2,13 +2,10 @@
 sudo cp -rv ./vortexWallpapers /usr/share/backgrounds/
 
 #zshrc
-cp -rv ./.zshrc ~/
+cp -rv ./Configs/.zshrc ~/
 
 #Fonts
 cp -rv ./.fonts ~/
-
-#Icons
-sudo apt install numix-icon-theme-circle -y
 
 #Themes
 cp -rv ./.themes ~/
@@ -50,6 +47,10 @@ gsettings set org.gnome.shell favorite-apps "['code.desktop', 'org.gnome.Nautilu
 gsettings set org.gnome.shell disabled-extensions "['apps-menu@gnome-shell-extensions.gcampax.github.com', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com']"
 
 gsettings set org.gnome.shell enabled-extensions "['floating-dock@nandoferreira_prof@hotmail.com', 'gsconnect@andyholmes.github.io', 'blur-my-shell@aunetx', 'noannoyance@daase.net', 'caffeine@patapon.info', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'just-perfection-desktop@just-perfection', 'hidetopbar@mathieu.bidon.ca', 'CoverflowAltTab@palatis.blogspot.com', 'extensions-sync@elhan.io']"
+
+#Config Gnome Terminal
+dconf load /org/gnome/terminal/legacy/keybindings/ < ./Configs/terminalKeys.dconf
+dconf load /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/ < ./Configs/terminalConfig.dconf
 
 #Config ZSH
 sudo usermod -s /usr/bin/zsh $(whoami)
