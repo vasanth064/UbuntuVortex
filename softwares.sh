@@ -34,7 +34,7 @@ sudo apt install ./google-chrome-stable_current_amd64.deb
 sudo add-apt-repository ppa:obsproject/obs-studio
 
 sudo apt update -y
-sudo apt install preload vlc gimp gparted flatpak gnome-software-plugin-flatpak dconf-editor v4l2loopback-dkms obs-studio scrcpy adb albert code apt-transport-https dkms ttf-mscorefonts-installer rar unrar libavcodec-extra microsoft-edge-stable gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi zsh qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon virt-manager gnome-shell-extensions chrome-gnome-shell gnome-tweaks-y
+sudo apt install preload vlc gimp gparted flatpak gnome-software-plugin-flatpak dconf-editor v4l2loopback-dkms obs-studio scrcpy adb albert code apt-transport-https dkms ttf-mscorefonts-installer rar unrar libavcodec-extra microsoft-edge-stable gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi zsh qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon virt-manager gnome-shell-extensions chrome-gnome-shell gnome-tweaks -y
 
 #Removing Duplicates form apt Sources
 rm -f packages.microsoft.gpg
@@ -55,7 +55,7 @@ flatpak install flathub com.discordapp.Discord -y
 flatpak install flathub io.bassi.Amberol -y #Music Player
 flatpak install flathub com.mattjakeman.ExtensionManager -y 
 flatpak install flathub io.github.Figma_Linux.figma_linux -y
-flatpak install flathub io.github.shiftey.Desktop
+flatpak install flathub io.github.shiftey.Desktop -y
 
 #Install and configure Virtual Manager
 sudo virsh net-start default
