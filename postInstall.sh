@@ -35,3 +35,21 @@ then
     read enter
     echo '-----------------------------------------------------'
 fi
+echo '-----------------------------------------------------'
+echo 'y/n) Setup Extension Sync'
+read es
+echo '-----------------------------------------------------'
+if [ $es = 'y' ]
+then
+    echo '------------------Extension Sync---------------------'
+    echo '1) Download Extensions Sync from'
+    echo 'https://extensions.gnome.org/'
+    read enter
+    echo '2) Snippent ID'
+    echo '2329526'
+    read enter
+    echo '3) User Token'
+    echo 'glpat-zkcX3TNkuSSbeUZykxF9'
+    read enter
+    echo '-----------------------------------------------------'
+fi
