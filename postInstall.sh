@@ -10,7 +10,6 @@ then
     echo '3) Copy the below lines and add it in nano'
     echo ''
     echo '@reboot /home/vasanth/Scripts/organizeDownloads.sh'
-    echo '@reboot /home/vasanth/Scripts/organizeDocs.sh'
     echo ''
     echo '4) Save and press ENTER to continue'
     read enter
