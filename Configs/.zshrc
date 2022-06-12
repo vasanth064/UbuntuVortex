@@ -5,8 +5,6 @@ fi
 # Set up the prompt
 
 #Alias
-#Temporary
-alias cs='mcs'
 
 #System
 alias update='sudo apt update'
@@ -32,8 +30,8 @@ alias ya='yarn add'
 alias yr='yarn remove'
 
 #Custom Functions
-cra () {
- 
+alias of='nautilus .'
+cra () { 
   name=$1
   cd ~/Projects/ && npx create-react-app "$name" && cd "$name" && code . && exit
 }
