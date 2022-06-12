@@ -133,6 +133,7 @@ application/vnd.sqlite3=org.gnome.gedit.desktop;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=onlyoffice-desktopeditors_onlyoffice-desktopeditors.desktop;
 text/plain=microsoft-edge.desktop;
 application/x-executable=org.gnome.gedit.desktop;
+application/xml=org.gnome.gedit.desktop;
 
 [Default Applications]
 x-scheme-handler/http=microsoft-edge.desktop
