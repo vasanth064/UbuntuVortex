@@ -1,9 +1,6 @@
 #Copy Login and Desktop Wallpaper
 sudo cp -rv ./vortexWallpapers /usr/share/backgrounds/
 
-#zshrc
-cp -rv ./Configs/.zshrc ~/
-
 #Fonts
 cp -rv ./.fonts ~/
 
@@ -13,11 +10,15 @@ cp -rv ./.themes ~/
 #Scripts
 cp -rv ./Scripts ~/
 
-#Config
-cp -rv ./.config ~/  # some default settings and customizations
-
 #Local
 cp -rv ./.local ~/
+
+cd ~
+mkdir Projects
+git clone git@github.com:vasanth064/dotfiles.git $HOME/Projects/dotfiles --bare
+alias config='/usr/bin/git --git-dir=$HOME/Projects/dotfiles --work-tree=$HOME'
+config config --local status.showUntrackedFiles no
+config checkout
 
 #Set Application theme and Icon Pack
 gsettings set org.gnome.desktop.interface gtk-theme "macosDark"

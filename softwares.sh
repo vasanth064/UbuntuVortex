@@ -8,11 +8,6 @@ sudo apt install numix-icon-theme-circle -y
 ./user.sh
 
 #Adding apt External Sources 
-#albert
-curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add -
-echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_21.10/ /' | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list
-sudo wget -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_21.10/Release.key -O "/etc/apt/trusted.gpg.d/home:manuelschneid3r.asc"
-
 #vs code
 sudo apt-get install wget gpg
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
@@ -28,13 +23,8 @@ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge sta
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb
 
-
-#PPA
-#OBS-STUDIO
-sudo add-apt-repository ppa:obsproject/obs-studio
-
 sudo apt update -y
-sudo apt install preload vlc gimp gparted flatpak gnome-software-plugin-flatpak dconf-editor v4l2loopback-dkms obs-studio scrcpy adb albert code apt-transport-https dkms ttf-mscorefonts-installer rar unrar libavcodec-extra microsoft-edge-stable gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi zsh qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon virt-manager gnome-shell-extensions chrome-gnome-shell gnome-tweaks -y
+sudo apt install preload vlc gimp gparted flatpak gnome-software-plugin-flatpak dconf-editor v4l2loopback-dkms obs-studio scrcpy adb code apt-transport-https dkms ttf-mscorefonts-installer rar unrar libavcodec-extra microsoft-edge-stable rofi gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi zsh qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon virt-manager gnome-shell-extensions chrome-gnome-shell gnome-tweaks pip -y
 
 #Removing Duplicates form apt Sources
 rm -f packages.microsoft.gpg
@@ -43,7 +33,6 @@ sudo rm -rv /etc/apt/sources.list.d/microsoft-edge-dev.list
 
 #snap Packages
 sudo snap install emote
-sudo snap install onlyoffice-desktopeditors
 
 #flatpak Packages
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -56,6 +45,8 @@ flatpak install flathub io.bassi.Amberol -y #Music Player
 flatpak install flathub com.mattjakeman.ExtensionManager -y 
 flatpak install flathub io.github.Figma_Linux.figma_linux -y
 flatpak install flathub io.github.shiftey.Desktop -y
+flatpak install flathub org.onlyoffice.desktopeditors -y
+flatpak install flathub com.obsproject.Studio -y
 
 #Install and configure Virtual Manager
 sudo virsh net-start default
