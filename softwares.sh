@@ -24,7 +24,9 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb
 
 sudo apt update -y
-sudo apt install preload vlc gimp gparted flatpak gnome-software-plugin-flatpak dconf-editor v4l2loopback-dkms obs-studio scrcpy adb code apt-transport-https dkms ttf-mscorefonts-installer rar unrar libavcodec-extra microsoft-edge-stable rofi gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi zsh qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon virt-manager gnome-shell-extensions chrome-gnome-shell gnome-tweaks pip -y
+sudo apt install preload vlc gimp gparted flatpak gnome-software-plugin-flatpak dconf-editor v4l2loopback-dkms obs-studio scrcpy adb code apt-transport-https dkms ttf-mscorefonts-installer rar unrar libavcodec-extra microsoft-edge-stable rofi xsel gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi zsh qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon virt-manager gnome-shell-extensions chrome-gnome-shell gnome-tweaks pip -y
+
+#xsel for copying emojis in rofi
 
 #Removing Duplicates form apt Sources
 rm -f packages.microsoft.gpg
