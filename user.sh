@@ -2,6 +2,7 @@
 gh auth login
 gh auth setup-git
 gh auth status
+cp -rv ~/snap/gh/502/.ssh ~/
 
 #setup git bare
 cd ~
