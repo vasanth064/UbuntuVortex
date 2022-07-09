@@ -1,5 +1,19 @@
+#setup gh
+gh auth login
+gh auth setup-git
+gh auth status
+
+#setup git bare
+cd ~
+echo "dotfiles" >> .gitignore
+git clone git@github.com:vasanth064/dotfiles.git $HOME/dotfiles --bare
+alias dg='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+dg config --local status.showUntrackedFiles no
+dg checkout
+
 #Copy Login and Desktop Wallpaper
-sudo cp -rv ./vortexWallpapers /usr/share/backgrounds/
+git clone git@github.com:vasanth064/Wallpapers.git
+sudo cp -rv ./Wallpapers ~/Pictures/
 
 #Fonts
 cp -rv ./.fonts ~/
@@ -15,10 +29,6 @@ cp -rv ./.local ~/
 
 cd ~
 mkdir Projects
-git clone git@github.com:vasanth064/dotfiles.git $HOME/Projects/dotfiles --bare
-alias config='/usr/bin/git --git-dir=$HOME/Projects/dotfiles --work-tree=$HOME'
-config config --local status.showUntrackedFiles no
-config checkout
 
 #Set Application theme and Icon Pack
 gsettings set org.gnome.desktop.interface gtk-theme "macosDark"
@@ -57,5 +67,3 @@ dconf load /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d
 sudo usermod -s /usr/bin/zsh $(whoami)
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/powerlevel10k
 exec zsh
-
-p10k configure

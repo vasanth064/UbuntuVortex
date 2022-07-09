@@ -15,26 +15,6 @@ then
     read enter
 fi
 echo '-----------------------------------------------------'
-echo 'y/n) Setup Github SSH'
-read gssh
-echo '-----------------------------------------------------'
-if [ $gssh = 'y' ]
-then
-    echo '-----------------Github SSH Setup--------------------'
-    echo 'Setting up SSH for Github'
-    echo '------------Press enter untill Passphrase------------'
-    read enter
-    echo '-----------------------------------------------------'
-    ssh-keygen -t ed25519 -C "vasanthvdev@gmail.com"
-    eval "$(ssh-agent -s)"
-    ssh-add ~/.ssh/id_ed25519
-    echo '-------Copy the public key in ~/.ssh/id_ed25519------'
-    echo ''
-    echo '-------------Enter the key in Github SSH-------------'
-    read enter
-    echo '-----------------------------------------------------'
-fi
-echo '-----------------------------------------------------'
 echo 'y/n) Setup Extension Sync'
 read es
 echo '-----------------------------------------------------'
