@@ -13,6 +13,7 @@ git clone git@github.com:vasanth064/dotfiles.git $HOME/dotfiles --bare
 #Copy Login and Desktop Wallpaper
 git clone git@github.com:vasanth064/Wallpapers.git
 sudo cp -rv ./Wallpapers ~/Pictures/
+sudo cp -rv ./Wallpapers/* /usr/share/backgrounds
 
 #Fonts
 cp -rv ./.fonts ~/
@@ -39,8 +40,8 @@ gsettings set org.gnome.desktop.interface monospace-font-name 'Monospace 11'
 gsettings set org.gnome.desktop.wm.preferences titlebar-font 'Poppins Bold 11'
 
 #Set Wallpaper
-gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/vortexWallpapers/desktopWallpaperFlliped.jpg'
-gsettings set org.gnome.desktop.screensaver picture-uri 'file:///usr/share/backgrounds/vortexWallpapers/loginWallpaper.jpg'
+gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/47.jpg'
+gsettings set org.gnome.desktop.screensaver picture-uri 'file:///usr/share/backgrounds/46.jpg'
 
 #Top bar and Title bar Preferences
 gsettings set org.gnome.desktop.interface show-battery-percentage true
