@@ -15,17 +15,8 @@ git clone git@github.com:vasanth064/Wallpapers.git
 sudo cp -rv ./Wallpapers ~/Pictures/
 sudo cp -rv ./Wallpapers/* /usr/share/backgrounds
 
-#Fonts
-cp -rv ./.fonts ~/
-
-#Themes
-cp -rv ./.themes ~/
-
 #Scripts
 cp -rv ./Scripts ~/
-
-#Local
-cp -rv ./.local ~/
 
 cd ~
 mkdir Projects
