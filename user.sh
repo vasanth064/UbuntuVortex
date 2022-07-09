@@ -5,12 +5,10 @@ gh auth status
 cp -rv ~/snap/gh/502/.ssh ~/
 
 #setup git bare
-cd ~
-echo "dotfiles" >> .gitignore
+cp -rv ./Configs/.gitignore ~/
 git clone git@github.com:vasanth064/dotfiles.git $HOME/dotfiles --bare
-alias dg='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-dg config --local status.showUntrackedFiles no
-dg checkout
+/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME config --local status.showUntrackedFiles no
+/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME checkout
 
 #Copy Login and Desktop Wallpaper
 git clone git@github.com:vasanth064/Wallpapers.git
