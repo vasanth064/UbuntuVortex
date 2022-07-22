@@ -3,7 +3,7 @@
 cd ~/Documents
 
 #Code
-mkdir COde
+mkdir Code
 mv -v *.htm* *.php *.css *.js *.json *.sql *.xml ~/Documents/Code
 
 #Office
